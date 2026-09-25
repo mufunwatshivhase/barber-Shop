@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment | Fresh Fade Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Fresh Fade Hub home">
+                <img src="images/logo.png" alt="Fresh Fade Hub Logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="barber-login.html" class="nav-login-link">Login</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span>Dark</span>
+            </button>
+            <button class="mobile-menu-btn" type="button" aria-label="Open navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="appointment-page">
+            <div class="container">
+                <div class="appointment-intro animate">
+                    <h1>Book an Appointment</h1>
+                    <p>Choose your service, preferred date, and time. We will confirm your booking shortly.</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info animate">
+                        <h3>Plan Your Visit</h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-clock"></i> Monday - Friday: 9AM - 7PM</p>
+                            <p><i class="fas fa-clock"></i> Saturday: 10AM - 5PM</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Street, Gauteng, South Africa</p>
+                            <p><i class="fas fa-phone"></i> +27 555 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-form animate">
+                        <form id="appointmentForm">
+                            <div class="form-group">
+                                <label for="customerName">Your name</label>
+                                <input id="customerName" name="name" type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerEmail">Your email</label>
+                                <input id="customerEmail" name="email" type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customerPhone">Phone number</label>
+                                <input id="customerPhone" name="phone" type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hairstyle">Hairstyle or service</label>
+                                <select id="hairstyle" name="hairstyle" required>
+                                    <option value="" data-price="" disabled selected>Select a hairstyle</option>
+                                    <option value="Men's Haircut" data-price="100" data-duration="60">Men's Haircut - R100</option>
+                                    <option value="Skin Fade" data-price="150" data-duration="75">Skin Fade - R150</option>
+                                    <option value="Beard Grooming" data-price="50" data-duration="45">Beard Grooming - R50</option>
+                                    <option value="Hot Towel Shave" data-price="150" data-duration="45">Hot Towel Shave - R150</option>
+                                    <option value="Styling and Colour" data-price="200" data-duration="120">Styling and Colour - R200</option>
+                                    <option value="Special Package" data-price="250" data-duration="120">Special Package - R250</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="barber">Preferred barber</label>
+                                <select id="barber" name="barber" required>
+                                    <option value="" disabled selected>Select a barber</option>
+                                    <option value="Any available barber">Any available barber</option>
+                                    <option value="Thabo">Thabo</option>
+                                    <option value="Lerato">Lerato</option>
+                                    <option value="Mandla">Mandla</option>
+                                </select>
+                            </div>
+                            <div class="booking-row">
+                                <div class="form-group">
+                                    <label for="appointmentPrice">Price</label>
+                                    <input id="appointmentPrice" name="price" type="text" placeholder="Select a hairstyle" readonly required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="appointmentDate">Date</label>
+                                    <input id="appointmentDate" name="date" type="date" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="appointmentTime">Preferred time</label>
+                                <input id="appointmentTime" name="time" type="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appointmentMessage">Message</label>
+                                <textarea id="appointmentMessage" name="message" placeholder="Anything we should know? (Optional)"></textarea>
+                            </div>
+                            <button type="submit" class="btn">Book Appointment</button>
+                            <p class="booking-confirmation" role="status" aria-live="polite"></p>
+                            <div class="calendar-actions" hidden>
+                                <p>Add your confirmed appointment to your calendar:</p>
+                                <a class="calendar-btn" id="googleCalendarLink" href="#" target="_blank" rel="noopener">
+                                    <i class="fab fa-google" aria-hidden="true"></i> Google Calendar
+                                </a>
+                                <a class="calendar-btn calendar-btn-secondary" id="downloadCalendar" href="#" download="fresh-fade-hub-appointment.ics">
+                                    <i class="fas fa-download" aria-hidden="true"></i> Apple Calendar (.ics)
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

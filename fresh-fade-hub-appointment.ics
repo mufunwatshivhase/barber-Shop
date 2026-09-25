@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Fresh Fade Hub//Appointment//EN
+BEGIN:VEVENT
+UID:1790280797318-fresh-fade-hub@local
+DTSTAMP:20260924T221300
+DTSTART:20260925T150000
+DTEND:20260925T160000
+SUMMARY:Fresh Fade Hub - Men's Haircut
+DESCRIPTION:Service: Men's Haircut\\nBarber: Thabo\\nPrice: R250\\nCustomer: Test Customer\\nPhone: +27123456789\\nNotes: Test booking journey
+LOCATION:Fresh Fade Hub\, Street\, Gauteng\, South Africa
+END:VEVENT
+END:VCALENDAR

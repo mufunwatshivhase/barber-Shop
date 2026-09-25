@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Login | Fresh Fade Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Fresh Fade Hub home">
+                <img src="images/logo.png" alt="Fresh Fade Hub Logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#testimonials">Testimonials</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="barber-login.html" class="nav-login-link">Login</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span>Dark</span>
+            </button>
+            <button class="mobile-menu-btn" type="button" aria-label="Open navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="auth-page">
+            <div class="container auth-shell">
+                <div class="auth-card animate">
+                    <p class="promo-eyebrow">Barber access</p>
+                    <h1>Sign in</h1>
+                    <p class="auth-copy">View customer appointments and manage your schedule.</p>
+
+                    <form id="barberLoginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="barberEmail">Email</label>
+                            <input id="barberEmail" type="email" placeholder="barber@freshfadehub.co.za" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="barberPassword">Password</label>
+                            <input id="barberPassword" type="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn">Sign In</button>
+                        <p class="auth-note">Demo login: barber@freshfadehub.co.za / barber123</p>
+                        <p class="login-feedback" id="loginFeedback" role="status" aria-live="polite"></p>
+                    </form>
+
+                    <a href="index.html" class="text-link">Back to homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

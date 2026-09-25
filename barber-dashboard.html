@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Dashboard | Fresh Fade Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="index.html" aria-label="Fresh Fade Hub home">
+                <img src="images/logo.png" alt="Fresh Fade Hub Logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="barber-login.html" class="nav-login-link">Login</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span>Dark</span>
+            </button>
+            <button class="mobile-menu-btn" type="button" aria-label="Open navigation menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard-page">
+            <div class="container dashboard-container">
+                <div class="dashboard-header animate">
+                    <div>
+                        <p class="promo-eyebrow">Barber dashboard</p>
+                        <h1>Appointments</h1>
+                    </div>
+                    <button id="logoutBtn" class="btn btn-secondary" type="button">Log out</button>
+                </div>
+
+                <div class="dashboard-summary animate">
+                    <div class="summary-card">
+                        <span>Total bookings</span>
+                        <strong id="totalBookings">0</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Today</span>
+                        <strong id="todayBookings">0</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Upcoming</span>
+                        <strong id="upcomingBookings">0</strong>
+                    </div>
+                </div>
+
+                <div class="dashboard-panel animate">
+                    <div class="panel-header">
+                        <h2>Bookings</h2>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="appointments-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Barber</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Phone</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody id="appointmentsTableBody">
+                                <tr>
+                                    <td colspan="7" class="empty-state">No appointments yet.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
